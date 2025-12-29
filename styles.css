@@ -385,7 +385,7 @@ img {
     width: 85%;
     height: 85%;
     background: var(--bg-tertiary);
-    border-radius: var(--radius-full);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -400,11 +400,12 @@ img {
     cursor: pointer;
 }
 
-.avatar-inner img {
+.avatar-inner img#avatarImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: var(--radius-full);
+    border-radius: 50%;
+    display: block;
 }
 
 .scroll-indicator {
