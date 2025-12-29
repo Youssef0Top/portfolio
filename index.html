@@ -25,22 +25,11 @@
                 <li><a href="#certificates" class="nav-link">Certificates</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button class="admin-btn" id="adminBtn" title="Admin Login">
-                <i class="fas fa-lock"></i>
-            </button>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
-
-    <!-- Admin Panel (visible when logged in) -->
-    <div class="admin-panel hidden" id="adminPanel">
-        <span class="admin-status"><i class="fas fa-user-shield"></i> Edit Mode</span>
-        <button class="admin-logout-btn" id="logoutBtn">
-            <i class="fas fa-sign-out-alt"></i> Logout
-        </button>
-    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
@@ -50,10 +39,9 @@
         <div class="hero-content">
             <div class="hero-text">
                 <span class="hero-greeting">Hello, I'm</span>
-                <h1 class="hero-name editable" data-field="name">Youssef Tamer Mostafa</h1>
-                <p class="hero-title editable" data-field="title">AI-Specialized Software Developer</p>
-                <p class="hero-subtitle editable" data-field="subtitle">CIS Graduate | Machine Learning Enthusiast |
-                    Problem Solver</p>
+                <h1 class="hero-name">Youssef Tamer Mostafa</h1>
+                <h2 class="hero-title">AI-Specialized Software Developer</h2>
+                <p class="hero-subtitle">CIS Graduate | Machine Learning Enthusiast | Problem Solver</p>
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
@@ -62,9 +50,8 @@
             <div class="hero-visual">
                 <div class="hero-avatar">
                     <div class="avatar-ring"></div>
-                    <div class="avatar-inner editable" id="avatarInner" data-field="profilePicture">
-                        <i class="fas fa-user hidden" id="avatarIcon"></i>
-                        <img src="profile.jpg" alt="Profile Picture" id="avatarImage">
+                    <div class="avatar-inner">
+                        <img src="profile.jpg" alt="Youssef Tamer Mostafa" id="avatarImage">
                     </div>
                 </div>
             </div>
@@ -80,7 +67,7 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-bio editable" data-field="bio">A CIS graduate specialized in Artificial Intelligence
+                    <p class="about-bio">A CIS graduate specialized in Artificial Intelligence
                         with experience in software development, machine learning, and data analysis. Strong in data
                         processing, algorithm development, and applying AI to real-world problems. Adaptable,
                         detail-oriented, and a self-learner with strong teamwork, communication, leadership, and
@@ -95,14 +82,14 @@
                                 class="edu-link">Bachelor of Computing & Information Sciences</a>
                             <span><a href="https://eui.edu.eg/" target="_blank" class="edu-link-uni">Egypt University of
                                     Informatics (EUI)</a></span>
-                            <span class="editable" data-field="eduYears">2021 - 2025</span>
+                            <span>2021 - 2025</span>
                         </div>
                     </div>
                     <div class="info-card">
                         <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="info-content">
                             <h4>Location</h4>
-                            <p class="editable" data-field="location">Giza, Egypt</p>
+                            <p>Giza, Egypt</p>
                         </div>
                     </div>
                 </div>
@@ -117,9 +104,6 @@
             <div class="skills-container" id="skillsContainer">
                 <!-- Skills will be loaded dynamically -->
             </div>
-            <button class="add-btn hidden" id="addSkillBtn">
-                <i class="fas fa-plus"></i> Add Skill
-            </button>
         </div>
     </section>
 
@@ -130,9 +114,6 @@
             <div class="projects-grid" id="projectsGrid">
                 <!-- Projects will be loaded dynamically -->
             </div>
-            <button class="add-btn hidden" id="addProjectBtn">
-                <i class="fas fa-plus"></i> Add Project
-            </button>
         </div>
     </section>
 
@@ -143,9 +124,6 @@
             <div class="certificates-timeline" id="certificatesTimeline">
                 <!-- Certificates will be loaded dynamically -->
             </div>
-            <button class="add-btn hidden" id="addCertBtn">
-                <i class="fas fa-plus"></i> Add Certificate
-            </button>
         </div>
     </section>
 
@@ -169,21 +147,21 @@
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div class="contact-details">
                             <h4>Email</h4>
-                            <a href="mailto:ytamer5@gmail.com" class="editable" data-field="email">ytamer5@gmail.com</a>
+                            <a href="mailto:ytamer5@gmail.com">ytamer5@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-phone"></i></div>
                         <div class="contact-details">
                             <h4>Phone</h4>
-                            <a href="tel:+201007003357" class="editable" data-field="phone">+201007003357</a>
+                            <a href="tel:+201007003357">+201007003357</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="contact-details">
                             <h4>Location</h4>
-                            <p class="editable" data-field="contactLocation">Giza, Egypt</p>
+                            <p>Giza, Egypt</p>
                         </div>
                     </div>
                 </div>
@@ -209,56 +187,6 @@
             <p>&copy; 2025 Youssef Tamer Mostafa. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Login Modal -->
-    <div class="modal hidden" id="loginModal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">&times;</button>
-            <h3>Admin Login</h3>
-            <form id="loginForm">
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required autocomplete="username">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required autocomplete="current-password">
-                </div>
-                <p class="error-message hidden" id="loginError">Invalid credentials</p>
-                <button type="submit" class="btn btn-primary btn-full">Login</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Edit Modal -->
-    <div class="modal hidden" id="editModal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content modal-lg">
-            <button class="modal-close" id="editModalClose">&times;</button>
-            <h3 id="editModalTitle">Edit Item</h3>
-            <form id="editForm">
-                <div id="editFormFields"></div>
-                <div class="modal-actions">
-                    <button type="button" class="btn btn-danger" id="deleteItemBtn">Delete</button>
-                    <button type="submit" class="btn btn-primary">Save Changes</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Add Item Modal -->
-    <div class="modal hidden" id="addModal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content modal-lg">
-            <button class="modal-close" id="addModalClose">&times;</button>
-            <h3 id="addModalTitle">Add New Item</h3>
-            <form id="addForm">
-                <div id="addFormFields"></div>
-                <button type="submit" class="btn btn-primary btn-full">Add Item</button>
-            </form>
-        </div>
-    </div>
 
     <!-- Project Detail Modal -->
     <div class="modal hidden" id="projectDetailModal">
