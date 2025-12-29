@@ -25,7 +25,7 @@ const portfolioData = {
             id: 1,
             title: "Shokran",
             description: "Shokran is your all-in-one shopping companion designed to make everyday purchasing simple, fast, and reliable.",
-            detailedInfo: "Inspired from Talabat and Breadfast, this product is made for a real client in need to digitalize his store for easier ordering and delivery.<br>Play Store: https://play.google.com/store/apps/details?id=com.khaledshop.shokran&hl=en<br>App Store: https://apps.apple.com/eg/app/shokran/id6755833065",
+            detailedInfo: "Inspired from Talabat and Breadfast, this product is made for a real client in need to digitalize his store for easier ordering and delivery.\nPlay Store: https://play.google.com/store/apps/details?id=com.khaledshop.shokran&hl=en\nApp Store: https://apps.apple.com/eg/app/shokran/id6755833065",
             tags: ["Full Stack", "Mobile"],
             icon: "fa-shopping-cart",
             screenshots: []
@@ -43,7 +43,7 @@ const portfolioData = {
             id: 3,
             title: "Egyptian Arabic Text-to-Speech",
             description: "A text-to-speech model for Egyptian Arabic dialect using XTTS v2 technology.",
-            detailedInfo: "Developed a custom TTS model specifically trained on Egyptian Arabic dialect using XTTS v2. The model can generate natural-sounding speech from Arabic text input, handling the nuances of the Egyptian dialect.<br>Check on linkedin: https://www.linkedin.com/posts/omar-samir-8415b2285_ai-texttospeech-egtts-ugcPost-7289034370428919809-VcMY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEBIL-YB6f5IMj2lstnEWhb7LDMFGxiZ4Hw",
+            detailedInfo: "Developed a custom TTS model specifically trained on Egyptian Arabic dialect using XTTS v2. The model can generate natural-sounding speech from Arabic text input, handling the nuances of the Egyptian dialect.\nCheck on linkedin: https://www.linkedin.com/posts/omar-samir-8415b2285_ai-texttospeech-egtts-ugcPost-7289034370428919809-VcMY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEBIL-YB6f5IMj2lstnEWhb7LDMFGxiZ4Hw",
             tags: ["AI", "NLP", "Python"],
             icon: "fa-volume-high",
             screenshots: []
@@ -286,7 +286,7 @@ function openProjectDetail(id) {
     document.getElementById('projectDetailIcon').innerHTML = `<i class="fas ${project.icon || 'fa-code'}"></i>`;
     document.getElementById('projectDetailTitle').textContent = project.title;
     document.getElementById('projectDetailDesc').textContent = project.description;
-    document.getElementById('projectDetailInfo').textContent = project.detailedInfo || project.description;
+    document.getElementById('projectDetailInfo').innerHTML = (project.detailedInfo || project.description).replace(/\n/g, '<br>');
 
     // Update tags
     const tagsContainer = document.getElementById('projectDetailTags');
