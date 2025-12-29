@@ -176,6 +176,11 @@ function loadData() {
             detailedInfo: p.detailedInfo || p.description,
             screenshots: p.screenshots || []
         }));
+        // Ensure profile picture is set
+        if (!portfolioData.profile.profilePicture) {
+            portfolioData.profile.profilePicture = "profile.jpg";
+        }
+        saveData();
     } else {
         portfolioData = JSON.parse(JSON.stringify(defaultData));
         saveData();
