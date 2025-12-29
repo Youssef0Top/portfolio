@@ -12,7 +12,7 @@ const defaultData = {
         email: "ytamer5@gmail.com",
         phone: "+201007003357",
         contactLocation: "Giza, Egypt",
-        profilePicture: ""
+        profilePicture: "profile.jpg"
     },
     skills: [
         "Python", "Java", "C/C++", "C#", "OCaml",
