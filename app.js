@@ -379,6 +379,22 @@ function initializeEventListeners() {
             }
         });
     });
+
+    // Avatar Click Handler (dedicated because children may block clicks)
+    const avatarInner = document.getElementById('avatarInner');
+    if (avatarInner) {
+        avatarInner.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (isLoggedIn) {
+                const newUrl = prompt('Enter Profile Picture URL:', portfolioData.profile.profilePicture || '');
+                if (newUrl !== null) {
+                    portfolioData.profile.profilePicture = newUrl.trim();
+                    saveData();
+                    applyProfileData();
+                }
+            }
+        });
+    }
 }
 
 // ===== Render Dynamic Content =====
