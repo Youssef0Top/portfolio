@@ -394,7 +394,8 @@ function applyProfileData() {
     const profile = portfolioData.profile;
     document.querySelectorAll('.editable').forEach(el => {
         const field = el.dataset.field;
-        if (field && profile[field]) {
+        // Skip profilePicture - it's handled separately as an image
+        if (field && field !== 'profilePicture' && profile[field]) {
             el.textContent = profile[field];
         }
     });
