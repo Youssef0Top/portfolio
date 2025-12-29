@@ -23,6 +23,15 @@ const portfolioData = {
     projects: [
         {
             id: 1,
+            title: "Shokran",
+            description: "Shokran is your all-in-one shopping companion designed to make everyday purchasing simple, fast, and reliable.",
+            detailedInfo: "Inspired from Talabat and Breadfast, this product is made for a real client in need to digitalize his store for easier ordering and delivery. \nPlay Store: https://play.google.com/store/apps/details?id=com.khaledshop.shokran&hl=en \nApp Store: https://apps.apple.com/eg/app/shokran/id6755833065",
+            tags: ["Full Stack", "Mobile"],
+            icon: "fa-cart",
+            screenshots: []
+        },
+        {
+            id: 2,
             title: "Smart Parking System",
             description: "Graduation project - An intelligent parking management system with real-time monitoring and automated space detection.",
             detailedInfo: "This graduation project implements an AI-based smart parking solution that uses computer vision to detect available parking spaces and checks licecnse plates in real-time. The system includes a mobile app for users to find and reserve spots, and a management dashboard for administrators.",
@@ -31,7 +40,7 @@ const portfolioData = {
             screenshots: []
         },
         {
-            id: 2,
+            id: 3,
             title: "Egyptian Arabic Text-to-Speech",
             description: "A text-to-speech model for Egyptian Arabic dialect using XTTS v2 technology.",
             detailedInfo: "Developed a custom TTS model specifically trained on Egyptian Arabic dialect using XTTS v2. The model can generate natural-sounding speech from Arabic text input, handling the nuances of the Egyptian dialect. \nCheck on linkedin: https://www.linkedin.com/posts/omar-samir-8415b2285_ai-texttospeech-egtts-ugcPost-7289034370428919809-VcMY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEBIL-YB6f5IMj2lstnEWhb7LDMFGxiZ4Hw",
@@ -40,7 +49,7 @@ const portfolioData = {
             screenshots: []
         },
         {
-            id: 3,
+            id: 4,
             title: "AI Social Media Agent",
             description: "An intelligent agent for automating and managing social media platform interactions.",
             detailedInfo: "Built an AI-powered agent that can automate social media tasks including content scheduling, engagement analysis, and automated responses. Uses natural language processing to understand and generate human-like content.",
@@ -49,7 +58,7 @@ const portfolioData = {
             screenshots: []
         },
         {
-            id: 4,
+            id: 5,
             title: "Brain Tumor Detection",
             description: "Medical imaging AI model for detecting and classifying brain tumors from MRI scans.",
             detailedInfo: "Implemented a deep learning model using convolutional neural networks to analyze MRI brain scans. The model can detect the presence of tumors and classify them into different categories with high accuracy.",
@@ -58,7 +67,7 @@ const portfolioData = {
             screenshots: []
         },
         {
-            id: 5,
+            id: 6,
             title: "LLM Chatbot (Android)",
             description: "Android mobile application featuring a chatbot powered by Llama LLM.",
             detailedInfo: "Developed an Android application that integrates with Llama large language model to provide conversational AI capabilities. The app features a clean interface and supports context-aware conversations.",
@@ -67,7 +76,7 @@ const portfolioData = {
             screenshots: []
         },
         {
-            id: 6,
+            id: 7,
             title: "Stock Market Analysis AI",
             description: "Fundamental analysis model for stock market prediction using machine learning techniques.",
             detailedInfo: "Created a machine learning model that performs fundamental analysis on stocks using financial data, market indicators, and sentiment analysis to predict market trends and provide investment insights.",
@@ -76,7 +85,7 @@ const portfolioData = {
             screenshots: []
         },
         {
-            id: 7,
+            id: 8,
             title: "Hospital Management System",
             description: "A comprehensive hospital system for managing patients, appointments, and medical records.",
             detailedInfo: "Built a full-stack hospital management system with features including patient registration, appointment scheduling, medical records management, billing, and reporting. Includes role-based access control for different hospital staff.",
@@ -85,7 +94,7 @@ const portfolioData = {
             screenshots: []
         },
         {
-            id: 8,
+            id: 9,
             title: "Game Development (Godot)",
             description: "Multiple games including Flappy Bird, Angry Birds clone, and Memory Game using Godot Engine.",
             detailedInfo: "Developed several game projects using Godot 4 engine including: Flappy Bird clone with custom physics, Angry Birds-style projectile game, and a Memory card matching game. Each game features custom graphics and sound effects.",
@@ -94,7 +103,7 @@ const portfolioData = {
             screenshots: []
         },
         {
-            id: 9,
+            id: 10,
             title: "OCaml Chatbot",
             description: "A functional programming chatbot built using OCaml language.",
             detailedInfo: "Implemented a chatbot using functional programming principles in OCaml. The bot uses pattern matching and recursive data structures for natural language understanding and response generation.",
@@ -103,7 +112,7 @@ const portfolioData = {
             screenshots: []
         },
         {
-            id: 10,
+            id: 11,
             title: "Image Classification Model",
             description: "Deep learning model for image classification using Python and neural networks.",
             detailedInfo: "Built an image classification model using TensorFlow/Keras with convolutional neural networks. The model was trained on a custom dataset and can classify images into multiple categories with high accuracy.",
