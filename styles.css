@@ -79,6 +79,17 @@ img {
     display: none !important;
 }
 
+.edit-mode .editable {
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.edit-mode .editable:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 4px;
+    outline: 1px dashed var(--accent-primary);
+}
+
 /* ===== Navigation ===== */
 .navbar {
     position: fixed;
@@ -381,7 +392,12 @@ img {
     font-size: 6rem;
     color: var(--text-muted);
     overflow: hidden;
-    /* Ensure image stays within circle */
+    position: relative;
+    z-index: 2;
+}
+
+.edit-mode .avatar-inner.editable {
+    cursor: pointer;
 }
 
 .avatar-inner img {

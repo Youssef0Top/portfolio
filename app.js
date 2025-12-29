@@ -540,7 +540,17 @@ function openProjectDetail(id) {
 // ===== Inline Editing =====
 function editInlineField(element) {
     const field = element.dataset.field;
-    const currentValue = element.textContent;
+    let currentValue = portfolioData.profile[field] || element.textContent;
+
+    if (field === 'profilePicture') {
+        const newUrl = prompt('Enter Profile Picture URL:', currentValue);
+        if (newUrl !== null) {
+            portfolioData.profile[field] = newUrl.trim();
+            saveData();
+            applyProfileData();
+        }
+        return;
+    }
 
     const input = document.createElement('input');
     input.type = 'text';
@@ -566,9 +576,12 @@ function editInlineField(element) {
     function saveValue() {
         const newValue = input.value.trim();
         if (newValue && newValue !== currentValue) {
+            if (field) {
+                portfolioData.profile[field] = newValue;
+            }
             element.textContent = newValue;
-            portfolioData.profile[field] = newValue;
             saveData();
+            if (field === 'profilePicture') applyProfileData();
         }
         element.style.display = '';
         input.remove();
