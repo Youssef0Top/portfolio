@@ -11,7 +11,8 @@ const defaultData = {
         location: "Giza, Egypt",
         email: "ytamer5@gmail.com",
         phone: "+201007003357",
-        contactLocation: "Giza, Egypt"
+        contactLocation: "Giza, Egypt",
+        profilePicture: ""
     },
     skills: [
         "Python", "Java", "C/C++", "C#", "OCaml",
@@ -397,6 +398,18 @@ function applyProfileData() {
             el.textContent = profile[field];
         }
     });
+
+    // Handle profile picture
+    const avatarImage = document.getElementById('avatarImage');
+    const avatarIcon = document.getElementById('avatarIcon');
+    if (profile.profilePicture && profile.profilePicture.trim() !== "") {
+        avatarImage.src = profile.profilePicture;
+        avatarImage.classList.remove('hidden');
+        avatarIcon.classList.add('hidden');
+    } else {
+        avatarImage.classList.add('hidden');
+        avatarIcon.classList.remove('hidden');
+    }
 }
 
 function renderSkills() {
