@@ -34,7 +34,7 @@ const portfolioData = {
             id: 2,
             title: "Egyptian Arabic Text-to-Speech",
             description: "A text-to-speech model for Egyptian Arabic dialect using XTTS v2 technology.",
-            detailedInfo: "Developed a custom TTS model specifically trained on Egyptian Arabic dialect using XTTS v2. The model can generate natural-sounding speech from Arabic text input, handling the nuances of the Egyptian dialect. Check on linkedin: https://www.linkedin.com/posts/omar-samir-8415b2285_ai-texttospeech-egtts-ugcPost-7289034370428919809-VcMY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEBIL-YB6f5IMj2lstnEWhb7LDMFGxiZ4Hw",
+            detailedInfo: "Developed a custom TTS model specifically trained on Egyptian Arabic dialect using XTTS v2. The model can generate natural-sounding speech from Arabic text input, handling the nuances of the Egyptian dialect. \nCheck on linkedin: https://www.linkedin.com/posts/omar-samir-8415b2285_ai-texttospeech-egtts-ugcPost-7289034370428919809-VcMY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEBIL-YB6f5IMj2lstnEWhb7LDMFGxiZ4Hw",
             tags: ["AI", "NLP", "Python"],
             icon: "fa-volume-high",
             screenshots: []
