@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
     <meta name="keywords" content="AI, Machine Learning, Software Developer, Portfolio, Python, Flutter">
     <title>Youssef Tamer Mostafa | AI Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -49,7 +52,8 @@
                 <span class="hero-greeting">Hello, I'm</span>
                 <h1 class="hero-name editable" data-field="name">Youssef Tamer Mostafa</h1>
                 <p class="hero-title editable" data-field="title">AI-Specialized Software Developer</p>
-                <p class="hero-subtitle editable" data-field="subtitle">CIS Graduate | Machine Learning Enthusiast | Problem Solver</p>
+                <p class="hero-subtitle editable" data-field="subtitle">CIS Graduate | Machine Learning Enthusiast |
+                    Problem Solver</p>
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
@@ -75,15 +79,21 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-bio editable" data-field="bio">A CIS graduate specialized in Artificial Intelligence with experience in software development, machine learning, and data analysis. Strong in data processing, algorithm development, and applying AI to real-world problems. Adaptable, detail-oriented, and a self-learner with strong teamwork, communication, leadership, and problem-solving skills.</p>
+                    <p class="about-bio editable" data-field="bio">A CIS graduate specialized in Artificial Intelligence
+                        with experience in software development, machine learning, and data analysis. Strong in data
+                        processing, algorithm development, and applying AI to real-world problems. Adaptable,
+                        detail-oriented, and a self-learner with strong teamwork, communication, leadership, and
+                        problem-solving skills.</p>
                 </div>
                 <div class="about-info">
                     <div class="info-card">
                         <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
                         <div class="info-content">
                             <h4>Education</h4>
-                            <p class="editable" data-field="education">Bachelor of Computing & Information Sciences</p>
-                            <span class="editable" data-field="university">Egypt University of Informatics (EUI)</span>
+                            <a href="https://eui.edu.eg/faculty-computing-information-sciences/home" target="_blank"
+                                class="edu-link">Bachelor of Computing & Information Sciences</a>
+                            <a href="https://eui.edu.eg/" target="_blank" class="edu-link university-link">Egypt
+                                University of Informatics (EUI)</a>
                             <span class="editable" data-field="eduYears">2021 - 2025</span>
                         </div>
                     </div>
@@ -248,6 +258,41 @@
         </div>
     </div>
 
+    <!-- Project Detail Modal -->
+    <div class="modal hidden" id="projectDetailModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-xl">
+            <button class="modal-close" id="projectDetailClose">&times;</button>
+            <div class="project-detail-content">
+                <div class="project-detail-header">
+                    <div class="project-detail-icon" id="projectDetailIcon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h2 id="projectDetailTitle">Project Title</h2>
+                </div>
+                <div class="project-detail-tags" id="projectDetailTags"></div>
+                <div class="project-detail-description">
+                    <h4>Description</h4>
+                    <p id="projectDetailDesc">Project description will appear here.</p>
+                </div>
+                <div class="project-detail-info">
+                    <h4>Detailed Information</h4>
+                    <p id="projectDetailInfo">More detailed information about the project.</p>
+                </div>
+                <div class="project-detail-screenshots">
+                    <h4>Screenshots</h4>
+                    <div class="screenshots-grid" id="projectScreenshots">
+                        <div class="screenshot-placeholder">
+                            <i class="fas fa-image"></i>
+                            <span>No screenshots added yet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
+
 </html>
