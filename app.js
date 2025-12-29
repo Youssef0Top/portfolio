@@ -293,20 +293,17 @@ function openProjectDetail(id) {
     tagsContainer.innerHTML = project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('');
 
     // Update screenshots
+    const screenshotsSection = document.querySelector('.project-detail-screenshots');
     const screenshotsContainer = document.getElementById('projectScreenshots');
     if (project.screenshots && project.screenshots.length > 0) {
+        screenshotsSection.style.display = 'block';
         screenshotsContainer.innerHTML = project.screenshots.map(url => `
             <div class="screenshot-item">
                 <img src="${url}" alt="Screenshot" onclick="window.open('${url}', '_blank')">
             </div>
         `).join('');
     } else {
-        screenshotsContainer.innerHTML = `
-            <div class="screenshot-placeholder">
-                <i class="fas fa-image"></i>
-                <span>No screenshots added yet</span>
-            </div>
-        `;
+        screenshotsSection.style.display = 'none';
     }
 
     modal.classList.remove('hidden');
