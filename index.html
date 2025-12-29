@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Youssef Tamer Mostafa - AI-specialized Software Developer Portfolio">
+    <meta name="keywords" content="AI, Machine Learning, Software Developer, Portfolio, Python, Flutter">
+    <title>Youssef Tamer Mostafa | AI Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">YT<span>.</span></a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="admin-btn" id="adminBtn" title="Admin Login">
+                <i class="fas fa-lock"></i>
+            </button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Admin Panel (visible when logged in) -->
+    <div class="admin-panel hidden" id="adminPanel">
+        <span class="admin-status"><i class="fas fa-user-shield"></i> Edit Mode</span>
+        <button class="admin-logout-btn" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-greeting">Hello, I'm</span>
+                <h1 class="hero-name editable" data-field="name">Youssef Tamer Mostafa</h1>
+                <p class="hero-title editable" data-field="title">AI-Specialized Software Developer</p>
+                <p class="hero-subtitle editable" data-field="subtitle">CIS Graduate | Machine Learning Enthusiast | Problem Solver</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-avatar">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar-inner">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-bio editable" data-field="bio">A CIS graduate specialized in Artificial Intelligence with experience in software development, machine learning, and data analysis. Strong in data processing, algorithm development, and applying AI to real-world problems. Adaptable, detail-oriented, and a self-learner with strong teamwork, communication, leadership, and problem-solving skills.</p>
+                </div>
+                <div class="about-info">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="info-content">
+                            <h4>Education</h4>
+                            <p class="editable" data-field="education">Bachelor of Computing & Information Sciences</p>
+                            <span class="editable" data-field="university">Egypt University of Informatics (EUI)</span>
+                            <span class="editable" data-field="eduYears">2021 - 2025</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-content">
+                            <h4>Location</h4>
+                            <p class="editable" data-field="location">Giza, Egypt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container" id="skillsContainer">
+                <!-- Skills will be loaded dynamically -->
+            </div>
+            <button class="add-btn hidden" id="addSkillBtn">
+                <i class="fas fa-plus"></i> Add Skill
+            </button>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+            <button class="add-btn hidden" id="addProjectBtn">
+                <i class="fas fa-plus"></i> Add Project
+            </button>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="section certificates" id="certificates">
+        <div class="container">
+            <h2 class="section-title">Certificates & Experience</h2>
+            <div class="certificates-timeline" id="certificatesTimeline">
+                <!-- Certificates will be loaded dynamically -->
+            </div>
+            <button class="add-btn hidden" id="addCertBtn">
+                <i class="fas fa-plus"></i> Add Certificate
+            </button>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="section languages" id="languages">
+        <div class="container">
+            <h2 class="section-title">Languages</h2>
+            <div class="languages-container" id="languagesContainer">
+                <!-- Languages will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:ytamer5@gmail.com" class="editable" data-field="email">ytamer5@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+201007003357" class="editable" data-field="phone">+201007003357</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p class="editable" data-field="contactLocation">Giza, Egypt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Youssef0Top" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:ytamer5@gmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Youssef Tamer Mostafa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal hidden" id="loginModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <h3>Admin Login</h3>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required autocomplete="current-password">
+                </div>
+                <p class="error-message hidden" id="loginError">Invalid credentials</p>
+                <button type="submit" class="btn btn-primary btn-full">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal hidden" id="editModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-lg">
+            <button class="modal-close" id="editModalClose">&times;</button>
+            <h3 id="editModalTitle">Edit Item</h3>
+            <form id="editForm">
+                <div id="editFormFields"></div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-danger" id="deleteItemBtn">Delete</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Item Modal -->
+    <div class="modal hidden" id="addModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-lg">
+            <button class="modal-close" id="addModalClose">&times;</button>
+            <h3 id="addModalTitle">Add New Item</h3>
+            <form id="addForm">
+                <div id="addFormFields"></div>
+                <button type="submit" class="btn btn-primary btn-full">Add Item</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
