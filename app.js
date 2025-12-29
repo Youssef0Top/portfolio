@@ -196,7 +196,18 @@ function resetData() {
 
 // ===== Authentication =====
 function verifyCredentials(username, password) {
-    return username === ADMIN_USERNAME && password === ADMIN_PASSWORD;
+    // Trim whitespace from inputs
+    const trimmedUser = username.trim();
+    const trimmedPass = password.trim();
+
+    // Debug logging (can be removed in production)
+    console.log('Login attempt:', {
+        inputUser: trimmedUser,
+        expectedUser: ADMIN_USERNAME,
+        passMatch: trimmedPass === ADMIN_PASSWORD
+    });
+
+    return trimmedUser === ADMIN_USERNAME && trimmedPass === ADMIN_PASSWORD;
 }
 
 function checkAuthState() {

@@ -1234,26 +1234,27 @@ img {
 
 /* ===== Education Links ===== */
 .edu-link {
-    display: block;
-    color: var(--accent-primary);
+    color: var(--text-secondary);
     font-size: 0.95rem;
     transition: all var(--transition-fast);
     text-decoration: none;
 }
 
 .edu-link:hover {
-    color: var(--accent-secondary);
+    color: var(--accent-primary);
     text-decoration: underline;
 }
 
-.edu-link.university-link {
-    color: var(--text-secondary);
+.edu-link-uni {
+    color: var(--text-muted);
     font-size: 0.85rem;
-    margin-top: 4px;
+    transition: all var(--transition-fast);
+    text-decoration: none;
 }
 
-.edu-link.university-link:hover {
+.edu-link-uni:hover {
     color: var(--accent-primary);
+    text-decoration: underline;
 }
 
 /* ===== Project Detail Modal ===== */
