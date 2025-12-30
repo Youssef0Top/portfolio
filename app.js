@@ -18,7 +18,7 @@ const portfolioData = {
         "HTML/CSS", "JavaScript", "Flutter",
         "MySQL", "NoSQL", ".NET",
         "Machine Learning", "Data Analysis", "AI Development",
-        "Godot Engine", "Git"
+        "Godot Engine", "Git", "React native", "Django"
     ],
     projects: [
         {
@@ -50,20 +50,20 @@ const portfolioData = {
         },
         {
             id: 4,
+            title: "Game Development (Godot)",
+            description: "Multiple games including Flappy Bird, Angry Birds clone, and Memory Game using Godot Engine.",
+            detailedInfo: "Developed several game projects using Godot 4 engine including: Flappy Bird clone with custom physics, Angry Birds-style projectile game, and a Memory card matching game. Each game features custom graphics and sound effects.",
+            tags: ["Game Dev", "Godot", "GDScript"],
+            icon: "fa-gamepad",
+            screenshots: ["media/mario.mp4", "media/toppa.mp4", "media/angry.mp4"]
+        },
+        {
+            id: 5,
             title: "AI Social Media Agent",
             description: "An intelligent agent for automating and managing social media platform interactions.",
             detailedInfo: "Built an AI-powered agent that can automate social media tasks including content scheduling, engagement analysis, and automated responses. Uses natural language processing to understand and generate human-like content.",
             tags: ["AI", "Automation", "Python"],
             icon: "fa-robot",
-            screenshots: []
-        },
-        {
-            id: 5,
-            title: "Brain Tumor Detection",
-            description: "Medical imaging AI model for detecting and classifying brain tumors from MRI scans.",
-            detailedInfo: "Implemented a deep learning model using convolutional neural networks to analyze MRI brain scans. The model can detect the presence of tumors and classify them into different categories with high accuracy.",
-            tags: ["AI", "Medical", "Computer Vision"],
-            icon: "fa-brain",
             screenshots: []
         },
         {
@@ -95,12 +95,12 @@ const portfolioData = {
         },
         {
             id: 9,
-            title: "Game Development (Godot)",
-            description: "Multiple games including Flappy Bird, Angry Birds clone, and Memory Game using Godot Engine.",
-            detailedInfo: "Developed several game projects using Godot 4 engine including: Flappy Bird clone with custom physics, Angry Birds-style projectile game, and a Memory card matching game. Each game features custom graphics and sound effects.",
-            tags: ["Game Dev", "Godot", "GDScript"],
-            icon: "fa-gamepad",
-            screenshots: ["media/mario.mp4", "media/toppa.mp4", "media/angry.mp4"]
+            title: "Brain Tumor Detection",
+            description: "Medical imaging AI model for detecting and classifying brain tumors from MRI scans.",
+            detailedInfo: "Implemented a deep learning model using convolutional neural networks to analyze MRI brain scans. The model can detect the presence of tumors and classify them into different categories with high accuracy.",
+            tags: ["AI", "Medical", "Computer Vision"],
+            icon: "fa-brain",
+            screenshots: []
         },
         {
             id: 10,
