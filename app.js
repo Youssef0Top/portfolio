@@ -28,7 +28,7 @@ const portfolioData = {
             detailedInfo: "Inspired from Talabat and Breadfast, this product is made for a real client in need to digitalize his store for easier ordering and delivery.\nPlay Store: https://play.google.com/store/apps/details?id=com.khaledshop.shokran&hl=en\nApp Store: https://apps.apple.com/eg/app/shokran/id6755833065",
             tags: ["Full Stack", "Mobile"],
             icon: "fa-shopping-cart",
-            screenshots: ["shokran.png"]
+            screenshots: ["media/shokran.png"]
         },
         {
             id: 2,
