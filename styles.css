@@ -1390,10 +1390,22 @@ img {
     border-color: var(--accent-primary);
 }
 
-.screenshot-item img {
+.screenshot-item img,
+.screenshot-item video,
+.screenshot-item iframe {
     width: 100%;
     height: 150px;
     object-fit: cover;
+    display: block;
+}
+
+.screenshot-item.video-item {
+    cursor: default;
+}
+
+.screenshot-item.video-item:hover {
+    transform: none;
+    border-color: var(--border-color);
 }
 
 /* ===== Project Card as Button ===== */

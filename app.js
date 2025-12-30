@@ -292,16 +292,46 @@ function openProjectDetail(id) {
     const tagsContainer = document.getElementById('projectDetailTags');
     tagsContainer.innerHTML = project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('');
 
-    // Update screenshots
+    // Update screenshots & videos
     const screenshotsSection = document.querySelector('.project-detail-screenshots');
     const screenshotsContainer = document.getElementById('projectScreenshots');
+
     if (project.screenshots && project.screenshots.length > 0) {
         screenshotsSection.style.display = 'block';
-        screenshotsContainer.innerHTML = project.screenshots.map(url => `
-            <div class="screenshot-item">
-                <img src="${url}" alt="Screenshot" onclick="window.open('${url}', '_blank')">
-            </div>
-        `).join('');
+        screenshotsContainer.innerHTML = project.screenshots.map(url => {
+            const isVideo = url.match(/\.(mp4|webm|ogg)$/i);
+            const isYoutube = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&]+)/);
+
+            if (isVideo) {
+                return `
+                    <div class="screenshot-item video-item">
+                        <video controls>
+                            <source src="${url}" type="video/${url.split('.').pop()}">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                `;
+            } else if (isYoutube) {
+                const videoId = isYoutube[1];
+                return `
+                    <div class="screenshot-item video-item">
+                        <iframe 
+                            src="https://www.youtube.com/embed/${videoId}" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                `;
+            } else {
+                return `
+                    <div class="screenshot-item">
+                        <img src="${url}" alt="Screenshot" onclick="window.open('${url}', '_blank')">
+                    </div>
+                `;
+            }
+        }).join('');
     } else {
         screenshotsSection.style.display = 'none';
     }
