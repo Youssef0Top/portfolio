@@ -37,7 +37,7 @@ const portfolioData = {
             detailedInfo: "This graduation project implements an AI-based smart parking solution that uses computer vision to detect available parking spaces and checks licecnse plates in real-time. The system includes a mobile app for users to find and reserve spots, and a management dashboard for administrators.",
             tags: ["AI", "Python"],
             icon: "fa-car",
-            screenshots: []
+            screenshots: ["media/SPS.mp4", "media/SPS.jpeg"]
         },
         {
             id: 3,
