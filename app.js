@@ -196,6 +196,18 @@ function initializeEventListeners() {
     projectDetailModal.querySelector('.modal-overlay').addEventListener('click', () => {
         projectDetailModal.classList.add('hidden');
     });
+
+    // Lightbox Modal
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    lightboxClose.addEventListener('click', () => {
+        lightboxModal.classList.add('hidden');
+    });
+
+    lightboxModal.querySelector('.modal-overlay').addEventListener('click', () => {
+        lightboxModal.classList.add('hidden');
+    });
 }
 
 // ===== Render Content =====
@@ -327,7 +339,7 @@ function openProjectDetail(id) {
             } else {
                 return `
                     <div class="screenshot-item">
-                        <img src="${url}" alt="Screenshot" onclick="window.open('${url}', '_blank')">
+                        <img src="${url}" alt="Screenshot" onclick="openLightbox('${url}')">
                     </div>
                 `;
             }
@@ -336,6 +348,14 @@ function openProjectDetail(id) {
         screenshotsSection.style.display = 'none';
     }
 
+    modal.classList.remove('hidden');
+}
+
+// ===== Lightbox Functions =====
+function openLightbox(url) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImage');
+    img.src = url;
     modal.classList.remove('hidden');
 }
 
