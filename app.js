@@ -25,10 +25,10 @@ const portfolioData = {
             id: 1,
             title: "Shokran",
             description: "Shokran is your all-in-one shopping companion designed to make everyday purchasing simple, fast, and reliable.",
-            detailedInfo: "Inspired from Talabat and Breadfast, this product is made for a real client in need to digitalize his store for easier ordering and delivery.\nPlay Store: https://play.google.com/store/apps/details?id=com.khaledshop.shokran&hl=en\nApp Store: https://apps.apple.com/eg/app/shokran/id6755833065",
+            detailedInfo: "Inspired from Talabat and Breadfast, this product is made for a real client in need to digitalize his store for easier ordering and delivery.\nPlay Store: https://play.google.com/store/apps/details?id=eg.khaled.shokrann\nApp Store: https://apps.apple.com/eg/app/shokran/id6755833065",
             tags: ["Full Stack", "Mobile"],
             icon: "fa-shopping-cart",
-            screenshots: ["media/shokran.png"]
+            screenshots: ["media/shokran.mp4", "media/shokran.png"]
         },
         {
             id: 2,
