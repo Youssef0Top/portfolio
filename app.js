@@ -100,7 +100,7 @@ const portfolioData = {
             detailedInfo: "Developed several game projects using Godot 4 engine including: Flappy Bird clone with custom physics, Angry Birds-style projectile game, and a Memory card matching game. Each game features custom graphics and sound effects.",
             tags: ["Game Dev", "Godot", "GDScript"],
             icon: "fa-gamepad",
-            screenshots: []
+            screenshots: ["media/mario.mp4", "media/toppa.mp4", "media/angry.mp4"]
         },
         {
             id: 10,
