@@ -124,7 +124,7 @@ const portfolioData = {
     certificates: [
         {
             id: 1,
-            year: "2024",
+            year: "2025",
             title: "IBM Internship - AI Track",
             description: "Completed AI track internship at IBM, gaining hands-on experience with enterprise AI solutions."
         },
